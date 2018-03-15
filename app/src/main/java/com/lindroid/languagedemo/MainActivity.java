@@ -1,6 +1,5 @@
 package com.lindroid.languagedemo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,14 +7,17 @@ import android.view.View;
 import com.finddreams.languagelib.LanguageType;
 import com.finddreams.languagelib.MultiLanguageUtil;
 
-public class MainActivity extends Activity {
+/**
+ * @author linyulong
+ */
+public class MainActivity extends BaseActivity {
     private int selectedLanguage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MultiLanguageUtil.init(this);
+//        MultiLanguageUtil.init(this);
         selectedLanguage = MultiLanguageUtil.getInstance().getLanguageType();
 
     }
